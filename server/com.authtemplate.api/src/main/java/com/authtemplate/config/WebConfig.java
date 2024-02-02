@@ -19,11 +19,6 @@ import java.util.*;
 @EnableWebMvc
 public class WebConfig {
 
-    //-----UNCOMMENT IF YOU HAVE WANT TO ALLOW FROM A PARTICULAR ORIGIN
-    //@Value("${allowed.origin}")
-    //private String allowedOrigin;
-    //-----UNCOMMENT IF YOU HAVE WANT TO ALLOW FROM A PARTICULAR ORIGIN
-
     /**
      * cors filter
      *
@@ -58,9 +53,7 @@ public class WebConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowCredentials(true);
 
-        //-----UNCOMMENT IF YOU HAVE WANT TO ALLOW FROM A PARTICULAR ORIGIN
-        //config.addAllowedOrigin(allowedOrigin);
-        //-----UNCOMMENT IF YOU HAVE WANT TO ALLOW FROM A PARTICULAR ORIGIN
+        config.addAllowedOrigin("*");
         config.setAllowedHeaders(allowedHeaders);
         config.setAllowedMethods(allowedMethods);
         config.setMaxAge(MAX_AGE);

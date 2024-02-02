@@ -150,4 +150,9 @@ public class AuthController {
 
         return ResponseEntity.ok(new AlertDto("Error", "Invalid reset token."));
     }
+
+    @GetMapping("/check")
+    public String check(){
+        return "Authentication Successful";
+    }
 }
