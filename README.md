@@ -41,6 +41,11 @@ To provide a clearer understanding of how the features work, screenshots of test
   3. Front end should pick the token from url pass it along with the new password.
     ![ResetPassword](./assets/NewPassword.png)
 
+- **Check**:
+
+  To verify if auth successful, do a get request to /check and with the jwt token generated in postman authorization.
+     ![CheckRequest](./assets/Check.png)
+
 
 
 ## Setup and Installation
